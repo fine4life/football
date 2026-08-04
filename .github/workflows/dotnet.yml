@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - feature/github-actions
 
   pull_request:
     branches:
@@ -11,7 +12,6 @@ on:
 
 
 jobs:
-
   build:
 
     runs-on: ubuntu-latest
@@ -28,7 +28,7 @@ jobs:
         dotnet-version: '8.0.x'
 
 
-    - name: Restore Packages
+    - name: Restore Dependencies
       run: dotnet restore
 
 
